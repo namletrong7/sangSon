@@ -47,15 +47,24 @@ public class PerSon {
             return 1 ;    // là hacker
         } 
     }
-
+    public String kieu(){
+         if(isType()==true){
+            return "nhân viên" ;   // là nhân viên
+        }
+        else{
+            return "hacker" ;    // là hacker
+        } 
+    }
   
     
 
     @Override
     public String toString() {
-        return "PerSon{" + "thoiGian=" + thoiGian + ", type=" + type + '}';
+        return "thời gian đến " + thoiGian + " ||   thể loại : " + kieu() ;
     }
-
+    public void hienThi(){
+        System.out.printf("\n%10d%20s",thoiGian,kieu());
+    }
    
 
   

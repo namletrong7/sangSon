@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sangsong;
+package sangsong3;
 
 import java.util.Comparator;
 
@@ -12,8 +12,8 @@ import java.util.Comparator;
  * @author HP
  */
 public class PerSon {
-    float thoiGian ; 
-    boolean type ;
+    float thoiGian ; // thời gian đến của mỗi người
+    boolean type ;    // sử dụng để xác định người đó là nhân viên Microsoft hay linux hacker
     
 
     public PerSon() {
@@ -39,7 +39,7 @@ public class PerSon {
     public void setType(boolean type) {
         this.type = type;
     } 
-    public int type(){
+    public int Type(){
         if(isType()==true){
             return 0 ;   // là nhân viên
         }
@@ -47,24 +47,21 @@ public class PerSon {
             return 1 ;    // là hacker
         } 
     }
-    public String kieu(){
+    public String theLOai(){
          if(isType()==true){
-            return "Nhân viên" ;   // là nhân viên
+            return "Nhân viên Microsoft" ;   // là nhân viên
         }
         else{
-            return "Hacker" ;    // là hacker
+            return " Linux Hacker" ;    // là hacker
         } 
     }
   
     
 
-    @Override
-    public String toString() {
-        return "thời gian đến " + thoiGian + " ||   thể loại : " + kieu() ;
-    }
+    // hàm hiển thị
     public void hienThi(){
-    //    System.out.printf("\n%10d%20s",thoiGian,kieu());
-        System.out.printf("\n%10s%20s",thoiGian+"s",kieu());
+   
+        System.out.printf("\n%20s%30s",thoiGian+" s",theLOai());
     }
    
 
